@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+  <RunConfiguration>
+    <!-- Змінні середовища для процесу, у якому виконуються тести.
+         BANK_HEADLESS=true вмикає режим без вікна браузера:
+         TestSettings.Headless читає саме цю змінну, а DriverFactory
+         додає аргумент --headless=new при створенні Chrome. -->
+    <EnvironmentVariables>
+      <BANK_HEADLESS>true</BANK_HEADLESS>
+    </EnvironmentVariables>
+  </RunConfiguration>
+</RunSettings>

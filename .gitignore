@@ -1,0 +1,13 @@
+# Результати збірки
+bin/
+obj/
+
+# Код, згенерований Reqnroll з файлів .feature
+*.feature.cs
+
+# Службові файли Visual Studio
+.vs/
+*.user
+
+# Результати прогону тестів
+TestResults/

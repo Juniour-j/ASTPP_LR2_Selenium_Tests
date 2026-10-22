@@ -1,0 +1,17 @@
+{
+  "$schema": "https://schemas.reqnroll.net/reqnroll-config-latest.json",
+
+  "language": {
+    "feature": "en"
+  },
+
+  "bindingCulture": {
+    "name": "en-US"
+  },
+
+  "trace": {
+    "stepDefinitionSkeletonStyle": "CucumberExpressionAttribute",
+    "traceSuccessfulSteps": true,
+    "traceTimings": true
+  }
+}

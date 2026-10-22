@@ -1,0 +1,311 @@
+===START=== 
+--- dotnet version --- 
+10.0.401
+--- BUILD --- 
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  BankingWebTests -> D:\lab2\BankingWebTests\bin\Debug\net10.0\BankingWebTests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:02.12
+--- TEST --- 
+Test run for D:\lab2\BankingWebTests\bin\Debug\net10.0\BankingWebTests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+  Failed D1 - Withdrawing zero is answered with a message [11 s]
+  Error Message:
+   Assert.IsTrue failed. Після натискання кнопки Withdraw сторінка не показала жодного повідомлення. Клієнт не може зрозуміти, виконано операцію чи ні.
+  Stack Trace:
+     at BankingWebTests.StepDefinitions.WithdrawStepDefinitions.ThenAMessageIsDisplayed() in D:\lab2\BankingWebTests\StepDefinitions\WithdrawStepDefinitions.cs:line 184
+   at InvokeStub_Action`1.Invoke(Object, Span`1)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+--- End of stack trace from previous location ---
+   at Reqnroll.Bindings.BindingInvoker.InvokeBindingAsync(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, DurationHolder durationHolder)
+   at Reqnroll.Infrastructure.TestExecutionEngine.ExecuteStepMatchAsync(BindingMatch match, Object[] arguments, DurationHolder durationHolder)
+   at Reqnroll.Infrastructure.TestExecutionEngine.ExecuteStepMatchAsync(BindingMatch match, Object[] arguments, DurationHolder durationHolder)
+   at Reqnroll.Infrastructure.TestExecutionEngine.<>c__DisplayClass57_0.<<ExecuteStepAsync>b__7>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Reqnroll.Infrastructure.TestExecutionEngine.<>c__DisplayClass57_0.<<ExecuteStepAsync>g__HandleStepExecutionExceptions|0>d.MoveNext()
+   at Reqnroll.Infrastructure.TestExecutionEngine.OnAfterLastStepAsync()
+   at Reqnroll.TestRunner.CollectScenarioErrorsAsync()
+   at BankingWebTests.Features.WithdrawingMoneyFromAnXYZBankAccountFeature.ScenarioCleanupAsync()
+   at BankingWebTests.Features.WithdrawingMoneyFromAnXYZBankAccountFeature.D1_WithdrawingZeroIsAnsweredWithAMessage() in D:\lab2\BankingWebTests\Features\Withdraw.feature:line 185
+
+  Standard Output Messages:
+ Знімок екрана збережено: D:\lab2\BankingWebTests\bin\Debug\net10.0\Screenshots\D1 - Withdrawing zero is answered with a message_20260929_204718.png
+ 
+ 
+ TestContext Messages:
+ -> duration: BrowserHooks.OpenBrowser(): 1,0s
+ Given the XYZ Bank application is open
+ -> duration: WithdrawStepDefinitions.GivenTheApplicationIsOpen(): 1,5s
+ -> done: WithdrawStepDefinitions.GivenTheApplicationIsOpen() (1,5s)
+ And the application state is reset
+ -> duration: WithdrawStepDefinitions.GivenTheApplicationStateIsReset(): 0,3s
+ -> done: WithdrawStepDefinitions.GivenTheApplicationStateIsReset() (0,3s)
+ And the customer "Hermoine Granger" is logged in
+ -> duration: WithdrawStepDefinitions.GivenTheCustomerIsLoggedIn("Hermoine Granger"): 1,3s
+ -> done: WithdrawStepDefinitions.GivenTheCustomerIsLoggedIn("Hermoine Granger") (1,3s)
+ And the account "1001" is selected
+ -> done: WithdrawStepDefinitions.SelectAccount("1001") (0,1s)
+ And the starting balance is 5096
+ -> done: WithdrawStepDefinitions.GivenTheStartingBalanceIs(5096) (0,0s)
+ When the customer withdraws 0
+ -> duration: WithdrawStepDefinitions.WhenTheCustomerWithdraws(0): 3,8s
+ -> done: WithdrawStepDefinitions.WhenTheCustomerWithdraws(0) (3,8s)
+ Then a message about the result of the operation is displayed
+ -> error: Assert.IsTrue failed. Після натискання кнопки Withdraw сторінка не показала жодного повідомлення. Клієнт не може зрозуміти, виконано операцію чи ні. (3,1s)
+ -> duration: Scenario: D1 - Withdrawing zero is answered with a message: 11,1s
+ -> duration: BrowserHooks.CloseBrowser(): 274,8ms
+
+
+  Failed D2 - The amount field is cleared after a zero withdrawal [9 s]
+  Error Message:
+   Assert.AreEqual failed. Expected:<>. Actual:<0>. Поле суми мало очиститись після операції, але в ньому лишилось «0». Це ознака того, що обробник операції не доопрацював до кінця.
+  Stack Trace:
+     at BankingWebTests.StepDefinitions.WithdrawStepDefinitions.ThenTheAmountFieldIsCleared() in D:\lab2\BankingWebTests\StepDefinitions\WithdrawStepDefinitions.cs:line 245
+   at InvokeStub_Action`1.Invoke(Object, Span`1)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+--- End of stack trace from previous location ---
+   at Reqnroll.Bindings.BindingInvoker.InvokeBindingAsync(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, DurationHolder durationHolder)
+   at Reqnroll.Infrastructure.TestExecutionEngine.ExecuteStepMatchAsync(BindingMatch match, Object[] arguments, DurationHolder durationHolder)
+   at Reqnroll.Infrastructure.TestExecutionEngine.ExecuteStepMatchAsync(BindingMatch match, Object[] arguments, DurationHolder durationHolder)
+   at Reqnroll.Infrastructure.TestExecutionEngine.<>c__DisplayClass57_0.<<ExecuteStepAsync>b__7>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Reqnroll.Infrastructure.TestExecutionEngine.<>c__DisplayClass57_0.<<ExecuteStepAsync>g__HandleStepExecutionExceptions|0>d.MoveNext()
+   at Reqnroll.Infrastructure.TestExecutionEngine.OnAfterLastStepAsync()
+   at Reqnroll.TestRunner.CollectScenarioErrorsAsync()
+   at BankingWebTests.Features.WithdrawingMoneyFromAnXYZBankAccountFeature.ScenarioCleanupAsync()
+   at BankingWebTests.Features.WithdrawingMoneyFromAnXYZBankAccountFeature.D2_TheAmountFieldIsClearedAfterAZeroWithdrawal() in D:\lab2\BankingWebTests\Features\Withdraw.feature:line 190
+
+  Standard Output Messages:
+ Знімок екрана збережено: D:\lab2\BankingWebTests\bin\Debug\net10.0\Screenshots\D2 - The amount field is cleared after a zero withdrawal_20260929_204727.png
+ 
+ 
+ TestContext Messages:
+ -> duration: BrowserHooks.OpenBrowser(): 1,2s
+ Given the XYZ Bank application is open
+ -> duration: WithdrawStepDefinitions.GivenTheApplicationIsOpen(): 2,1s
+ -> done: WithdrawStepDefinitions.GivenTheApplicationIsOpen() (2,1s)
+ And the application state is reset
+ -> duration: WithdrawStepDefinitions.GivenTheApplicationStateIsReset(): 0,3s
+ -> done: WithdrawStepDefinitions.GivenTheApplicationStateIsReset() (0,3s)
+ And the customer "Hermoine Granger" is logged in
+ -> duration: WithdrawStepDefinitions.GivenTheCustomerIsLoggedIn("Hermoine Granger"): 1,4s
+ -> done: WithdrawStepDefinitions.GivenTheCustomerIsLoggedIn("Hermoine Granger") (1,4s)
+ And the account "1001" is selected
+ -> done: WithdrawStepDefinitions.SelectAccount("1001") (0,1s)
+ And the starting balance is 5096
+ -> done: WithdrawStepDefinitions.GivenTheStartingBalanceIs(5096) (0,0s)
+ When the customer withdraws 0
+ -> duration: WithdrawStepDefinitions.WhenTheCustomerWithdraws(0): 3,8s
+ -> done: WithdrawStepDefinitions.WhenTheCustomerWithdraws(0) (3,8s)
+ Then the amount field is cleared
+ -> error: Assert.AreEqual failed. Expected:<>. Actual:<0>. Поле суми мало очиститись після операції, але в ньому лишилось «0». Це ознака того, що обробник операції не доопрацював до кінця. (0,0s)
+ -> duration: Scenario: D2 - The amount field is cleared after a zero withdrawal: 8,8s
+ -> duration: BrowserHooks.CloseBrowser(): 240,5ms
+
+
+  Failed D4 - A negative amount is answered with a message [11 s]
+  Error Message:
+   Assert.IsTrue failed. Після натискання кнопки Withdraw сторінка не показала жодного повідомлення. Клієнт не може зрозуміти, виконано операцію чи ні.
+  Stack Trace:
+     at BankingWebTests.StepDefinitions.WithdrawStepDefinitions.ThenAMessageIsDisplayed() in D:\lab2\BankingWebTests\StepDefinitions\WithdrawStepDefinitions.cs:line 184
+   at InvokeStub_Action`1.Invoke(Object, Span`1)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+--- End of stack trace from previous location ---
+   at Reqnroll.Bindings.BindingInvoker.InvokeBindingAsync(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, DurationHolder durationHolder)
+   at Reqnroll.Infrastructure.TestExecutionEngine.ExecuteStepMatchAsync(BindingMatch match, Object[] arguments, DurationHolder durationHolder)
+   at Reqnroll.Infrastructure.TestExecutionEngine.ExecuteStepMatchAsync(BindingMatch match, Object[] arguments, DurationHolder durationHolder)
+   at Reqnroll.Infrastructure.TestExecutionEngine.<>c__DisplayClass57_0.<<ExecuteStepAsync>b__7>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Reqnroll.Infrastructure.TestExecutionEngine.<>c__DisplayClass57_0.<<ExecuteStepAsync>g__HandleStepExecutionExceptions|0>d.MoveNext()
+   at Reqnroll.Infrastructure.TestExecutionEngine.OnAfterLastStepAsync()
+   at Reqnroll.TestRunner.CollectScenarioErrorsAsync()
+   at BankingWebTests.Features.WithdrawingMoneyFromAnXYZBankAccountFeature.ScenarioCleanupAsync()
+   at BankingWebTests.Features.WithdrawingMoneyFromAnXYZBankAccountFeature.D4_ANegativeAmountIsAnsweredWithAMessage() in D:\lab2\BankingWebTests\Features\Withdraw.feature:line 195
+
+  Standard Output Messages:
+ Знімок екрана збережено: D:\lab2\BankingWebTests\bin\Debug\net10.0\Screenshots\D4 - A negative amount is answered with a message_20260929_204738.png
+ 
+ 
+ TestContext Messages:
+ -> duration: BrowserHooks.OpenBrowser(): 1,0s
+ Given the XYZ Bank application is open
+ -> duration: WithdrawStepDefinitions.GivenTheApplicationIsOpen(): 1,5s
+ -> done: WithdrawStepDefinitions.GivenTheApplicationIsOpen() (1,5s)
+ And the application state is reset
+ -> duration: WithdrawStepDefinitions.GivenTheApplicationStateIsReset(): 289,4ms
+ -> done: WithdrawStepDefinitions.GivenTheApplicationStateIsReset() (0,3s)
+ And the customer "Hermoine Granger" is logged in
+ -> duration: WithdrawStepDefinitions.GivenTheCustomerIsLoggedIn("Hermoine Granger"): 1,3s
+ -> done: WithdrawStepDefinitions.GivenTheCustomerIsLoggedIn("Hermoine Granger") (1,3s)
+ And the account "1001" is selected
+ -> duration: WithdrawStepDefinitions.SelectAccount("1001"): 121,1ms
+ -> done: WithdrawStepDefinitions.SelectAccount("1001") (0,1s)
+ And the starting balance is 5096
+ -> done: WithdrawStepDefinitions.GivenTheStartingBalanceIs(5096) (0,0s)
+ When the customer withdraws -100
+ -> duration: WithdrawStepDefinitions.WhenTheCustomerWithdraws(-100): 3,9s
+ -> done: WithdrawStepDefinitions.WhenTheCustomerWithdraws(-100) (3,9s)
+ Then a message about the result of the operation is displayed
+ -> error: Assert.IsTrue failed. Після натискання кнопки Withdraw сторінка не показала жодного повідомлення. Клієнт не може зрозуміти, виконано операцію чи ні. (3,1s)
+ -> duration: Scenario: D4 - A negative amount is answered with a message: 11,2s
+ -> duration: BrowserHooks.CloseBrowser(): 0,3s
+
+
+  Failed D5 - An amount with cents can be withdrawn [12 s]
+  Error Message:
+   Assert.AreEqual failed. Expected:<Transaction successful>. Actual:<>. Застосунок не повідомив про результат операції
+  Stack Trace:
+     at BankingWebTests.StepDefinitions.WithdrawStepDefinitions.ThenTheWithdrawalIsReportedAsSuccessful() in D:\lab2\BankingWebTests\StepDefinitions\WithdrawStepDefinitions.cs:line 163
+   at InvokeStub_Action`1.Invoke(Object, Span`1)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+--- End of stack trace from previous location ---
+   at Reqnroll.Bindings.BindingInvoker.InvokeBindingAsync(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, DurationHolder durationHolder)
+   at Reqnroll.Infrastructure.TestExecutionEngine.ExecuteStepMatchAsync(BindingMatch match, Object[] arguments, DurationHolder durationHolder)
+   at Reqnroll.Infrastructure.TestExecutionEngine.ExecuteStepMatchAsync(BindingMatch match, Object[] arguments, DurationHolder durationHolder)
+   at Reqnroll.Infrastructure.TestExecutionEngine.<>c__DisplayClass57_0.<<ExecuteStepAsync>b__7>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Reqnroll.Infrastructure.TestExecutionEngine.<>c__DisplayClass57_0.<<ExecuteStepAsync>g__HandleStepExecutionExceptions|0>d.MoveNext()
+   at Reqnroll.Infrastructure.TestExecutionEngine.OnAfterLastStepAsync()
+   at Reqnroll.TestRunner.CollectScenarioErrorsAsync()
+   at BankingWebTests.Features.WithdrawingMoneyFromAnXYZBankAccountFeature.ScenarioCleanupAsync()
+   at BankingWebTests.Features.WithdrawingMoneyFromAnXYZBankAccountFeature.D5_AnAmountWithCentsCanBeWithdrawn() in D:\lab2\BankingWebTests\Features\Withdraw.feature:line 219
+
+  Standard Output Messages:
+ Знімок екрана збережено: D:\lab2\BankingWebTests\bin\Debug\net10.0\Screenshots\D5 - An amount with cents can be withdrawn_20260929_204759.png
+ 
+ 
+ TestContext Messages:
+ -> duration: BrowserHooks.OpenBrowser(): 1,0s
+ Given the XYZ Bank application is open
+ -> duration: WithdrawStepDefinitions.GivenTheApplicationIsOpen(): 2,2s
+ -> done: WithdrawStepDefinitions.GivenTheApplicationIsOpen() (2,2s)
+ And the application state is reset
+ -> duration: WithdrawStepDefinitions.GivenTheApplicationStateIsReset(): 0,3s
+ -> done: WithdrawStepDefinitions.GivenTheApplicationStateIsReset() (0,3s)
+ And the customer "Hermoine Granger" is logged in
+ -> duration: WithdrawStepDefinitions.GivenTheCustomerIsLoggedIn("Hermoine Granger"): 1,4s
+ -> done: WithdrawStepDefinitions.GivenTheCustomerIsLoggedIn("Hermoine Granger") (1,4s)
+ And the account "1001" is selected
+ -> done: WithdrawStepDefinitions.SelectAccount("1001") (0,1s)
+ And the starting balance is 5096
+ -> done: WithdrawStepDefinitions.GivenTheStartingBalanceIs(5096) (0,0s)
+ When the customer withdraws 10.5
+ -> duration: WithdrawStepDefinitions.WhenTheCustomerWithdraws(10,5): 3,9s
+ -> done: WithdrawStepDefinitions.WhenTheCustomerWithdraws(10,5) (3,9s)
+ Then the withdrawal is reported as successful
+ -> error: Assert.AreEqual failed. Expected:<Transaction successful>. Actual:<>. Застосунок не повідомив про результат операції (3,1s)
+ And the balance is 5085.5
+ -> skipped because of previous errors
+ -> duration: Scenario: D5 - An amount with cents can be withdrawn: 12,0s
+ -> duration: BrowserHooks.CloseBrowser(): 0,4s
+
+
+  Failed D6 - The error message disappears when another account is selected [5 s]
+  Error Message:
+   Assert.IsFalse failed. На сторінці залишилось повідомлення «Transaction Failed. You can not withdraw amount more than the balance.», хоча воно вже не стосується поточного стану і має бути прибране.
+  Stack Trace:
+     at BankingWebTests.StepDefinitions.WithdrawStepDefinitions.ThenNoMessageIsDisplayed() in D:\lab2\BankingWebTests\StepDefinitions\WithdrawStepDefinitions.cs:line 194
+   at InvokeStub_Action`1.Invoke(Object, Span`1)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+--- End of stack trace from previous location ---
+   at Reqnroll.Bindings.BindingInvoker.InvokeBindingAsync(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, DurationHolder durationHolder)
+   at Reqnroll.Infrastructure.TestExecutionEngine.ExecuteStepMatchAsync(BindingMatch match, Object[] arguments, DurationHolder durationHolder)
+   at Reqnroll.Infrastructure.TestExecutionEngine.ExecuteStepMatchAsync(BindingMatch match, Object[] arguments, DurationHolder durationHolder)
+   at Reqnroll.Infrastructure.TestExecutionEngine.<>c__DisplayClass57_0.<<ExecuteStepAsync>b__7>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Reqnroll.Infrastructure.TestExecutionEngine.<>c__DisplayClass57_0.<<ExecuteStepAsync>g__HandleStepExecutionExceptions|0>d.MoveNext()
+   at Reqnroll.Infrastructure.TestExecutionEngine.OnAfterLastStepAsync()
+   at Reqnroll.TestRunner.CollectScenarioErrorsAsync()
+   at BankingWebTests.Features.WithdrawingMoneyFromAnXYZBankAccountFeature.ScenarioCleanupAsync()
+   at BankingWebTests.Features.WithdrawingMoneyFromAnXYZBankAccountFeature.D6_TheErrorMessageDisappearsWhenAnotherAccountIsSelected() in D:\lab2\BankingWebTests\Features\Withdraw.feature:line 245
+
+  Standard Output Messages:
+ Знімок екрана збережено: D:\lab2\BankingWebTests\bin\Debug\net10.0\Screenshots\D6 - The error message disappears when another account is selected_20260929_204816.png
+ 
+ 
+ TestContext Messages:
+ -> duration: BrowserHooks.OpenBrowser(): 1,2s
+ Given the XYZ Bank application is open
+ -> duration: WithdrawStepDefinitions.GivenTheApplicationIsOpen(): 1,5s
+ -> done: WithdrawStepDefinitions.GivenTheApplicationIsOpen() (1,5s)
+ And the application state is reset
+ -> duration: WithdrawStepDefinitions.GivenTheApplicationStateIsReset(): 252,3ms
+ -> done: WithdrawStepDefinitions.GivenTheApplicationStateIsReset() (0,3s)
+ And the customer "Hermoine Granger" is logged in
+ -> duration: WithdrawStepDefinitions.GivenTheCustomerIsLoggedIn("Hermoine Granger"): 1,6s
+ -> done: WithdrawStepDefinitions.GivenTheCustomerIsLoggedIn("Hermoine Granger") (1,6s)
+ And the account "1001" is selected
+ -> done: WithdrawStepDefinitions.SelectAccount("1001") (0,0s)
+ And the starting balance is 5096
+ -> done: WithdrawStepDefinitions.GivenTheStartingBalanceIs(5096) (0,0s)
+ When the customer withdraws 999999
+ -> duration: WithdrawStepDefinitions.WhenTheCustomerWithdraws(999999): 0,8s
+ -> done: WithdrawStepDefinitions.WhenTheCustomerWithdraws(999999) (0,8s)
+ Then the withdrawal is rejected
+ -> done: WithdrawStepDefinitions.ThenTheWithdrawalIsRejected() (0,0s)
+ When the account "1002" is selected
+ -> done: WithdrawStepDefinitions.SelectAccount("1002") (0,1s)
+ Then no message about the result of the operation is displayed
+ -> error: Assert.IsFalse failed. На сторінці залишилось повідомлення «Transaction Failed. You can not withdraw amount more than the balance.», хоча воно вже не стосується поточного стану і має бути прибране. (0,0s)
+ -> duration: Scenario: D6 - The error message disappears when another account is selected: 5,5s
+ -> duration: BrowserHooks.CloseBrowser(): 206,4ms
+ -> duration: Feature: Withdrawing money from an XYZ Bank account: 153,5s
+
+
+  Failed D3 - Withdrawing zero does not raise an unhandled JavaScript exception [8 s]
+  Error Message:
+   Assert.AreEqual failed. Expected:<0>. Actual:<1>. Під час операції у браузері виник необроблений виняток JavaScript:
+[Severe] https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js 106:208 "TypeError: Cannot read properties of undefined (reading 'success')\n    at $scope.withdrawl (https://www.globalsqa.com/angularJs-protractor/BankingProject/withdrawlController.js:10:32)\n    at fn (eval at compile (https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js:212:409), \u003Canonymous>:4:218)\n    at f (https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js:253:485)\n    at b.$eval (https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js:133:221)\n    at b.$apply (https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js:133:451)\n    at HTMLFormElement.\u003Canonymous> (https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js:254:36)\n    at HTMLFormElement.c (https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js:35:217)"
+  Stack Trace:
+     at BankingWebTests.StepDefinitions.WithdrawStepDefinitions.ThenNoUnhandledJavaScriptExceptionOccurred() in D:\lab2\BankingWebTests\StepDefinitions\WithdrawStepDefinitions.cs:line 255
+   at InvokeStub_Action`1.Invoke(Object, Span`1)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+--- End of stack trace from previous location ---
+   at Reqnroll.Bindings.BindingInvoker.InvokeBindingAsync(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, DurationHolder durationHolder)
+   at Reqnroll.Infrastructure.TestExecutionEngine.ExecuteStepMatchAsync(BindingMatch match, Object[] arguments, DurationHolder durationHolder)
+   at Reqnroll.Infrastructure.TestExecutionEngine.ExecuteStepMatchAsync(BindingMatch match, Object[] arguments, DurationHolder durationHolder)
+   at Reqnroll.Infrastructure.TestExecutionEngine.<>c__DisplayClass57_0.<<ExecuteStepAsync>b__7>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Reqnroll.Infrastructure.TestExecutionEngine.<>c__DisplayClass57_0.<<ExecuteStepAsync>g__HandleStepExecutionExceptions|0>d.MoveNext()
+   at Reqnroll.Infrastructure.TestExecutionEngine.OnAfterLastStepAsync()
+   at Reqnroll.TestRunner.CollectScenarioErrorsAsync()
+   at BankingWebTests.Features.ReliabilityOfTheWithdrawOperationFeature.ScenarioCleanupAsync()
+   at BankingWebTests.Features.ReliabilityOfTheWithdrawOperationFeature.D3_WithdrawingZeroDoesNotRaiseAnUnhandledJavaScriptException() in D:\lab2\BankingWebTests\Features\WithdrawReliability.feature:line 42
+
+  Standard Output Messages:
+ Знімок екрана збережено: D:\lab2\BankingWebTests\bin\Debug\net10.0\Screenshots\D3 - Withdrawing zero does not raise an unhandled JavaScript exception_20260929_204825.png
+ 
+ 
+ TestContext Messages:
+ -> duration: BrowserHooks.OpenBrowser(): 1,1s
+ Given the XYZ Bank application is open
+ -> duration: WithdrawStepDefinitions.GivenTheApplicationIsOpen(): 1,6s
+ -> done: WithdrawStepDefinitions.GivenTheApplicationIsOpen() (1,6s)
+ And the application state is reset
+ -> duration: WithdrawStepDefinitions.GivenTheApplicationStateIsReset(): 270,8ms
+ -> done: WithdrawStepDefinitions.GivenTheApplicationStateIsReset() (0,3s)
+ And the customer "Hermoine Granger" is logged in
+ -> duration: WithdrawStepDefinitions.GivenTheCustomerIsLoggedIn("Hermoine Granger"): 1,3s
+ -> done: WithdrawStepDefinitions.GivenTheCustomerIsLoggedIn("Hermoine Granger") (1,3s)
+ And the account "1001" is selected
+ -> duration: WithdrawStepDefinitions.SelectAccount("1001"): 131,7ms
+ -> done: WithdrawStepDefinitions.SelectAccount("1001") (0,1s)
+ When the customer withdraws 0
+ -> duration: WithdrawStepDefinitions.WhenTheCustomerWithdraws(0): 3,8s
+ -> done: WithdrawStepDefinitions.WhenTheCustomerWithdraws(0) (3,8s)
+ Then no unhandled JavaScript exception occurred
+ -> error: Assert.AreEqual failed. Expected:<0>. Actual:<1>. Під час операції у браузері виник необроблений виняток JavaScript:
+ [Severe] https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js 106:208 "TypeError: Cannot read properties of undefined (reading 'success')\n    at $scope.withdrawl (https://www.globalsqa.com/angularJs-protractor/BankingProject/withdrawlController.js:10:32)\n    at fn (eval at compile (https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js:212:409), \u003Canonymous>:4:218)\n    at f (https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js:253:485)\n    at b.$eval (https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js:133:221)\n    at b.$apply (https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js:133:451)\n    at HTMLFormElement.\u003Canonymous> (https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js:254:36)\n    at HTMLFormElement.c (https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js:35:217)" (0,0s)
+ -> duration: Scenario: D3 - Withdrawing zero does not raise an unhandled JavaScript exception: 8,2s
+ -> duration: BrowserHooks.CloseBrowser(): 235,4ms
+ -> duration: Feature: Reliability of the Withdraw operation: 8,5s
+
+
+
+Failed!  - Failed:     6, Passed:    18, Skipped:     0, Total:    24, Duration: 2 m 42 s - BankingWebTests.dll (net10.0)
+===DONE=== 
